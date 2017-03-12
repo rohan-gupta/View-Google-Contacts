@@ -8,7 +8,6 @@
 	$dbpassword = $url["pass"];
 	$dbname = substr($url["path"], 1);
 	
-
 	$sql = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
 
 	if(isset($_POST['fullname'])){
