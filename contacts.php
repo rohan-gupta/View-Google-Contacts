@@ -44,7 +44,7 @@
 
 <div class="container">
 	<div class="jumbotron">
-		<div class="text-right "><a href="https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:8080" class="text-muted">logout</a></div>
+		<div class="text-right "><a href="https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=https://viewgooglecontacts.herokuapp.com/" class="text-muted">logout</a></div>
 		<div class="display-3">Contacts</div>
 		<hr class="my-4">
 		<p>Toggle contacts using the button below.</p>
