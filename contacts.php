@@ -16,7 +16,7 @@
         $password = $_SESSION['password'];
 
         $sql = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
-        $result = mysqli_query($sql, "Select * from `Task`.`" . $email."`");
+        $result = mysqli_query($sql, "Select * from `". $dbname ."`.`" . $email."`");
         mysqli_close($sql);
     }
 ?>

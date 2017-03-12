@@ -16,19 +16,19 @@
 	    $username = $_POST['email'];
 	    $password = $_POST['password'];
 
-	    $query = "SELECT * FROM  `Task`.`Users` WHERE userName='".$username."'";
+	    $query = "SELECT * FROM  `".$dbname."`.`users` WHERE userName='".$username."'";
 	    $result = mysqli_query($sql, $query);
 	    
 	    if(mysqli_num_rows($result)>0){
 	    	echo "<script>alert('Account already exists. Use another username')</script>";
 	    }
 	    else{
-	    	$query = "INSERT INTO `Task`.`Users`(fullName,userName,password) VALUES ('$name','$username','$password')";
+	    	$query = "INSERT INTO `".$dbname."`.`users`(fullName,userName,password) VALUES ('$name','$username','$password')";
 		    mysqli_query($sql, $query);
 		    echo "<script>alert('Registration complete, login now.')</script>";
 	    }
 	    
-	    $query = "CREATE TABLE `Task`.`". $username . "` (
+	    $query = "CREATE TABLE `".$dbname."`.`". $username . "` (
 	                `id` INT NOT NULL AUTO_INCREMENT,
 	                `fullName` VARCHAR(45) NULL,
 	                `phoneNumber` VARCHAR(45) NULL,

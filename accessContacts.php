@@ -36,7 +36,7 @@
 
     	$sql = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
 
-    	$query = "TRUNCATE TABLE `Task`.`". $email. "`";
+    	$query = "TRUNCATE TABLE `".$dbname."`.`". $email. "`";
     	mysqli_query($sql,$query);
 
 		foreach($results->getConnections() as $person) {
@@ -54,7 +54,7 @@
 					$phonenumber = $phone->getValue();	
 				}
 
-			$query = "INSERT INTO `Task`.`". $email. "` (fullName, phoneNumber) VALUES('$fullname','$phonenumber')";
+			$query = "INSERT INTO `".$dbname."`.`".$email. "` (fullName, phoneNumber) VALUES('$fullname','$phonenumber')";
 			mysqli_query($sql,$query);
 
 			$fullname = '';
